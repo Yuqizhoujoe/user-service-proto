@@ -7,6 +7,11 @@ option go_package = "github.com/Yuqizhoujoe/user-service-proto/proto";
 service UserService {
     rpc AddRoom(AddRoomRequest) returns (AddRoomResponse);
     rpc AddPost(AddPostRequest) returns (AddPostResponse);
+    rpc AddUser(AddUserRequest) returns (AddUserResponse);
+}
+
+message AddUserRequest {
+    string email = 1;
 }
 
 message AddRoomRequest {
@@ -24,5 +29,9 @@ message AddPostRequest {
 }
 
 message AddPostResponse {
+    bool success = 1;
+}
+
+message AddUserResponse {
     bool success = 1;
 }
