@@ -1,0 +1,40 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Go module files
+go.sum
+
+# Go build cache directory
+go-build/
+
+# Log files
+*.log
+
+# Protobuf generated files (if you do not want to commit them)
+# Uncomment the line below if you prefer not to commit the generated code
+# proto/*.pb.go
+
+# Dependency directories
+vendor/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+*.bak
+*.tmp
+*.DS_Store
+
+# Ignore node_modules in case of mixed projects with JS/TS
+node_modules/
