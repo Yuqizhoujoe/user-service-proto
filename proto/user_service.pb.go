@@ -20,14 +20,13 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-// Message for AddRoom request
 type AddRoomRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Email  string `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`                 // The user's email, which is used as the key
-	RoomId string `protobuf:"bytes,2,opt,name=room_id,json=roomId,proto3" json:"room_id,omitempty"` // The room ID to be added
+	Email  string `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
+	RoomId string `protobuf:"bytes,2,opt,name=room_id,json=roomId,proto3" json:"room_id,omitempty"`
 }
 
 func (x *AddRoomRequest) Reset() {
@@ -76,13 +75,12 @@ func (x *AddRoomRequest) GetRoomId() string {
 	return ""
 }
 
-// Message for AddRoom response
 type AddRoomResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Success bool `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"` // Whether the operation was successful
+	Success bool `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
 }
 
 func (x *AddRoomResponse) Reset() {
@@ -124,14 +122,13 @@ func (x *AddRoomResponse) GetSuccess() bool {
 	return false
 }
 
-// Message for AddPost request
 type AddPostRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Email  string `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`                 // The user's email, which is used as the key
-	PostId string `protobuf:"bytes,2,opt,name=post_id,json=postId,proto3" json:"post_id,omitempty"` // The post ID to be added
+	Email  string `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
+	PostId string `protobuf:"bytes,2,opt,name=post_id,json=postId,proto3" json:"post_id,omitempty"`
 }
 
 func (x *AddPostRequest) Reset() {
@@ -180,13 +177,12 @@ func (x *AddPostRequest) GetPostId() string {
 	return ""
 }
 
-// Message for AddPost response
 type AddPostResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Success bool `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"` // Whether the operation was successful
+	Success bool `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
 }
 
 func (x *AddPostResponse) Reset() {
@@ -257,10 +253,10 @@ var file_proto_user_service_proto_rawDesc = []byte{
 	0x63, 0x65, 0x2e, 0x41, 0x64, 0x64, 0x50, 0x6f, 0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
 	0x74, 0x1a, 0x1c, 0x2e, 0x75, 0x73, 0x65, 0x72, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e,
 	0x41, 0x64, 0x64, 0x50, 0x6f, 0x73, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42,
-	0x37, 0x5a, 0x35, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x59, 0x75,
+	0x31, 0x5a, 0x2f, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x59, 0x75,
 	0x71, 0x69, 0x7a, 0x68, 0x6f, 0x75, 0x6a, 0x6f, 0x65, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x2d, 0x73,
 	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x3b, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (

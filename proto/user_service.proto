@@ -2,36 +2,27 @@ syntax = "proto3";
 
 package userservice;
 
-// Specify the Go package where the generated code will reside
-option go_package = "github.com/Yuqizhoujoe/user-service-proto/proto;proto";
+option go_package = "github.com/Yuqizhoujoe/user-service-proto/proto";
 
-// UserService defines the gRPC service.
 service UserService {
-    // RPC method to add a room ID to the user's rooms
     rpc AddRoom(AddRoomRequest) returns (AddRoomResponse);
-
-    // RPC method to add a post ID to the user's posts
     rpc AddPost(AddPostRequest) returns (AddPostResponse);
 }
 
-// Message for AddRoom request
 message AddRoomRequest {
-    string email = 1;  // The user's email, which is used as the key
-    string room_id = 2; // The room ID to be added
+    string email = 1;
+    string room_id = 2;
 }
 
-// Message for AddRoom response
 message AddRoomResponse {
-    bool success = 1; // Whether the operation was successful
+    bool success = 1;
 }
 
-// Message for AddPost request
 message AddPostRequest {
-    string email = 1;  // The user's email, which is used as the key
-    string post_id = 2; // The post ID to be added
+    string email = 1;
+    string post_id = 2;
 }
 
-// Message for AddPost response
 message AddPostResponse {
-    bool success = 1; // Whether the operation was successful
+    bool success = 1;
 }

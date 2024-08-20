@@ -26,12 +26,8 @@ const (
 // UserServiceClient is the client API for UserService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-//
-// UserService defines the gRPC service.
 type UserServiceClient interface {
-	// RPC method to add a room ID to the user's rooms
 	AddRoom(ctx context.Context, in *AddRoomRequest, opts ...grpc.CallOption) (*AddRoomResponse, error)
-	// RPC method to add a post ID to the user's posts
 	AddPost(ctx context.Context, in *AddPostRequest, opts ...grpc.CallOption) (*AddPostResponse, error)
 }
 
@@ -66,12 +62,8 @@ func (c *userServiceClient) AddPost(ctx context.Context, in *AddPostRequest, opt
 // UserServiceServer is the server API for UserService service.
 // All implementations must embed UnimplementedUserServiceServer
 // for forward compatibility.
-//
-// UserService defines the gRPC service.
 type UserServiceServer interface {
-	// RPC method to add a room ID to the user's rooms
 	AddRoom(context.Context, *AddRoomRequest) (*AddRoomResponse, error)
-	// RPC method to add a post ID to the user's posts
 	AddPost(context.Context, *AddPostRequest) (*AddPostResponse, error)
 	mustEmbedUnimplementedUserServiceServer()
 }
